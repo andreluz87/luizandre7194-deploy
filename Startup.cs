@@ -37,7 +37,7 @@ namespace Shop
             services.AddControllers();
             
             //services.AddDbContext<DataContext>(opt => opt.UseInMemoryDatabase("Database"));
-            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("conectionString")));
+            services.AddDbContext<DataContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("connectionString")));
 
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
             services.AddAuthentication(ser => 
